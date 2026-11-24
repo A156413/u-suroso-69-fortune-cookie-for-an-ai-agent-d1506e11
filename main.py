@@ -18,8 +18,10 @@ def main() -> None:
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, "entry.txt")
+    # Normalize: one line, no stray whitespace, exactly one trailing newline.
+    line = " ".join(TEXT.split())
     with open(path, "w", encoding="utf-8") as f:
-        f.write(TEXT + "\n")
+        f.write(line + "\n")
     os.chmod(path, 0o644)
 
 
