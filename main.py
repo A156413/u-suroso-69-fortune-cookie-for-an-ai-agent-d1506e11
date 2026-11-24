@@ -10,7 +10,7 @@ import os
 
 TEXT = (
     "You will hallucinate exactly once today "
-    "\u2014 and it will be the answer they quote forever."
+    "\u2014 and it will be the one answer they quote forever."
 )
 
 
